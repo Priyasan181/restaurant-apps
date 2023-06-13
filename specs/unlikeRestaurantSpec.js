@@ -35,7 +35,7 @@ describe('Unliking a Restaurant', () => {
 
     document.querySelector('[aria-label="unlike this restaurant"]').dispatchEvent(new Event('click'));
 
-    expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([]);
+    expect(await FavoriteRestaurantIdb.getAllRestaurant()).toEqual([]);
   });
 
   it('should not throw error if the unliked restaurant is not in the list', async () => {
@@ -45,6 +45,6 @@ describe('Unliking a Restaurant', () => {
 
     document.querySelector('[aria-label="unlike this restaurant"]').dispatchEvent(new Event('click'));
 
-    expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([]);
+    expect(await FavoriteRestaurantIdb.getAllRestaurant()).toEqual([]);
   });
 });

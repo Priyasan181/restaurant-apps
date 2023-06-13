@@ -38,7 +38,6 @@ Scenario('unliking one restaurant', async ({ I }) => {
 
   I.amOnPage('/');
   I.seeElement('.post-item_title a');
-  I.click('.post-item_title a');
   const firstRestaurant = locate('.post-item_title a').first();
   const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant);
   I.click(firstRestaurant);
@@ -57,5 +56,5 @@ Scenario('unliking one restaurant', async ({ I }) => {
   I.click('#likeButton');
 
   I.amOnPage('/#/favorite');
-  I.dontSeeElement('post-item');
+  I.dontSeeElement('.post-item');
 });

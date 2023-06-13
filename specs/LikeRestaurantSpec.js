@@ -45,7 +45,7 @@ describe('Liking a Restaurant', () => {
     // Simulasikan pengguna menekan tombol suka restaurant
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
     // tidak ada restaurant yang ganda
-    expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([{ id: 1 }]);
+    expect(await FavoriteRestaurantIdb.getAllRestaurant()).toEqual([{ id: 1 }]);
 
     FavoriteRestaurantIdb.deleteRestaurant(1);
   });
@@ -54,6 +54,6 @@ describe('Liking a Restaurant', () => {
     await TestFactories.createLikeButtonPresenterWithRestaurant({});
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
-    expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([]);
+    expect(await FavoriteRestaurantIdb.getAllRestaurant()).toEqual([]);
   });
 });
