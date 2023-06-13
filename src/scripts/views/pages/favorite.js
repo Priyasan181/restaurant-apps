@@ -24,7 +24,7 @@ const Favorite = {
         RestaurantContainer.innerHTML += createRestaurantItemTemplate(Restaurants);
       });
     } else {
-      RestaurantContainer.innerHTML = `<div">Tidak ada restoran untuk ditampilkan</div>
+      RestaurantContainer.innerHTML = `<div">Tidak ada restaurant untuk ditampilkan</div>
     `;
     // Fungsi ini akan dipanggil setelah render()
     }
