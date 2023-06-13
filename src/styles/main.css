@@ -228,6 +228,12 @@ main {
 /*
 * post
 */
+.pos{
+  margin: 32px auto auto;
+  display: grid;
+  grid-row-gap: 16px;
+  text-align: left;
+}
 
 .posts {
   grid-template-columns: 1fr;
