@@ -52,7 +52,7 @@ Scenario('unliking one restaurant', async ({ I }) => {
 
   // membandingkan apakah sama atau tidak
   assert.strictEqual(firstRestaurantTitle, likedRestaurantTitle);
-
+  I.click(firstRestaurant);
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
